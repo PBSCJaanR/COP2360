@@ -107,11 +107,11 @@ public class TestContractor
 	public static void Main()
 	{
 		Console.WriteLine("Subcontractor class demonstration:");
-		Subcontractor joe = new Subcontractor("Joe", "2319", 2, 17.89); // Our first subcontactor. Note the shift number, indicating night
+		Subcontractor joe = new Subcontractor("Joe", "2319", 2, 17.89); // Our first subcontractor. Note the shift number, indicating night
 		// Outputting our subcontractor Joe's attributes to make sure they were assigned correctly
 		Console.WriteLine("Name of subcontractor: " + joe.Name);
 		Console.WriteLine("ID of subcontractor: " + joe.Number);
-		Console.WriteLine("Subcontracter started working on " + joe.StartDate);
+		Console.WriteLine("Subcontractor started working on " + joe.StartDate);
 		Console.WriteLine("Shift of subcontractor: " + (joe.Shift == 1 ? "Day" : "Night"));
 		Console.WriteLine($"Subcontractor's hourly pay: {joe.HourlyPayRate:C2}");
 		if(joe.Shift == 2) // Making note of the difference in pay depending on shift
@@ -159,7 +159,7 @@ public class TestContractor
 					if(confirm.ToLower() == "y")
 					{
 						Console.WriteLine("Enter the Contractor's starting date:");
-						// since ReadLine can only read strings from user input, msut parse as DateOnly
+						// since ReadLine can only read strings from user input, must parse as DateOnly
 						string dateString = Console.ReadLine();
 						DateOnly startDate = DateOnly.Parse(dateString);
 						// Initialize Contractor object
@@ -205,7 +205,7 @@ public class TestContractor
 					newSubcontractor.HourlyPayRate = payRate;
 					
 					// Determine if Contractor properties should be initialized
-					Console.WriteLine("Would you like to include more information about the Subcontrator? (y/n):");
+					Console.WriteLine("Would you like to include more information about the Subcontractor? (y/n):");
 					string confirm = Console.ReadLine();
 					// More input validation via the loop
 					while(confirm.ToLower() != "y" && confirm.ToLower() != "n")
